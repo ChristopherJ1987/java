@@ -1,13 +1,18 @@
 package java_1.dataTypes;
 
 class Arrays {
-    int[] nums = new int[]{10,23,3,4,5,2,1};
+
     String[] greetings = new String[]{"Hello","Howdy","Hallo","Hola","Bonjour","Ciao","أهلا و سهلا"};
     int[] bits = new int[]{0,1,1,1,0,0,0,1,1,1,1,1,0,1,0,0,1,0};
     String[] colors = new String[]{"bluebird","yellow bumblebee","black spider", "green monkey","pink","great gatsby","feeding frenzy","black bird","Matterhorn","Great White Lakes","torah","white bible","green quran", "red herring", "Black Sea"};
 
-    void printNums() {
+    static void printNums() {
 //        Programmatically print the nums array to the console.  Print each number on a new line.  The nums array is defined on this class.
+        System.out.println("printNums() Method: ");
+        int[] nums = new int[]{10,23,3,4,5,2,1};
+        for(Integer i : nums) {
+            System.out.println(i);
+        }
     };
 
     void greet(String name) {
@@ -29,6 +34,10 @@ class Arrays {
 //        In this class is an array called "colors".  Programmatically remove the elements that do NOT have a color associated with it.  Return the filtered color array of elements that have a color associated with it.
 //        ex : keepColors() => ["bluebird","yellow bumblebee","black spider", "green monkey","pink","black bird","Great White Lakes","white bible","green quran", "red herring", "Black Sea"]
         return null;
+    }
+
+    public static void main(String[] args) {
+        printNums();
     }
 
 }
