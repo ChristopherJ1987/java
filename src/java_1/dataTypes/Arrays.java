@@ -1,4 +1,5 @@
 package java_1.dataTypes;
+import java.util.ArrayList;
 
 class Arrays {
 
@@ -44,12 +45,19 @@ class Arrays {
         return null;
     };
 
-    String[] keepColors() {
+    static ArrayList<String> keepColors() {
 //        In this class is an array called "colors".  Programmatically remove the elements that do NOT have a color associated with it.  Return the filtered color array of elements that have a color associated with it.
 //        ex : keepColors() => ["bluebird","yellow bumblebee","black spider", "green monkey","pink","black bird","Great White Lakes","white bible","green quran", "red herring", "Black Sea"]
         System.out.println("keepColors() Method: ");
-        String[] colors = new String[]{"bluebird","yellow bumblebee","black spider", "green monkey","pink","great gatsby","feeding frenzy","black bird","Matterhorn","Great White Lakes","torah","white bible","green quran", "red herring", "Black Sea"};
-//        Create a filteredColorsArr
+        String colors[] = new String[]{"bluebird","yellow bumblebee","black spider", "green monkey","pink","great " +
+                "gatsby","feeding frenzy","black bird","Matterhorn","Great White Lakes","torah","white bible","green quran", "red herring", "Black Sea"};
+        ArrayList<String> filteredColors = new ArrayList<>();
+        for(String color : colors){
+            if(color.toLowerCase().contains("blue") || color.toLowerCase().contains("yellow") || color.toLowerCase().contains("black") || color.toLowerCase().contains("green") || color.toLowerCase().contains("pink") || color.toLowerCase().contains("white") || color.toLowerCase().contains("red")){
+                filteredColors.add(color);
+            }
+        }
+        System.out.println(filteredColors);
         return null;
     }
 
@@ -57,6 +65,7 @@ class Arrays {
         printNums();
         greet(" Christopher");
         bitsToBinaries();
+        keepColors();
     }
 
 }
