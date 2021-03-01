@@ -2,7 +2,6 @@ package java_1.dataTypes;
 
 class Arrays {
 
-    String[] greetings = new String[]{"Hello","Howdy","Hallo","Hola","Bonjour","Ciao","أهلا و سهلا"};
     int[] bits = new int[]{0,1,1,1,0,0,0,1,1,1,1,1,0,1,0,0,1,0};
     String[] colors = new String[]{"bluebird","yellow bumblebee","black spider", "green monkey","pink","great gatsby","feeding frenzy","black bird","Matterhorn","Great White Lakes","torah","white bible","green quran", "red herring", "Black Sea"};
 
@@ -15,13 +14,18 @@ class Arrays {
         }
     };
 
-    void greet(String name) {
+    static void greet(String name) {
 //        Randomly greet the person with a random greeting found in the greetings array.
 //        For every greeting in the greetings array :
 /*        ex : craig => greet() => "Hello Craig"
                "ABRAM" => greet() => "Hola Abram"
                "maTT => greet() => "أهلا و سهلا Matt"
  */
+        System.out.println("greet() Method: ");
+        String[] greetings = new String[]{"Hello","Howdy","Hallo","Hola","Bonjour","Ciao","أهلا و سهلا"};
+        for(String s : greetings) {
+            System.out.println(s + name);
+        }
     };
 
     boolean[] bitsToBinaries() {
@@ -38,6 +42,7 @@ class Arrays {
 
     public static void main(String[] args) {
         printNums();
+        greet(" Christopher");
     }
 
 }
