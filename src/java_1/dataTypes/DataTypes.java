@@ -2,32 +2,39 @@ package java_1.dataTypes;
 
 class DataTypes {
 
-//		boolean number = 2021;
-//		byte yearOfBirth = 1977;
+//		int number = 2021;
+//		int yearOfBirth = 1977;
 //		Array nums = [3,4,5,6,7,8,10,12];
-//		Object movieName = "Meet The Parents";
-//		double male = 'm';
-//		triple triplet = 3L;
-//		float female = 'f';
-//		short decimalVal = .0000000000001f;
-//		long halfByte = 0101;
+//		String movieName = "Meet The Parents";
+//		char male = 'm';
+//		long triplet = 3L;
+//		char female = 'f';
+//		byte decimalVal = .0000000000001f;
+//		int halfByte = 0101;
 
 
 	public static void main(String[] args) {
 		//the class fields defined in this DataTypes class have mistakes with either the data type, or the syntax.  Fix the data types so the main method correctly displays the value of all of the variables
 		//For the methods below in this DataTypes class, determine the appropriate datatypes for the inputs and the outputs
+		yearsToMonths(2);
+		monthsToHours(8);
+		daysToSeconds(730);
 	}
 
-	void yearsToMonths(Object years) {
-		//	convert years to months using appropriate data types for the inputs and the outputs, 2 years => 24 months
+	static void yearsToMonths(Integer years) {
+		System.out.println("yearsToMonths() Method: ");
+		System.out.println(years * 12);
+
 	}
 
-	void monthsToHours(Object months) {
-		//	convert months to hours using appropriate data types for the inputs and the outputs, 8 months => 17520 hours
+	static void monthsToHours(Integer months) {
+		System.out.println("monthsToHours() Method: ");
+		System.out.println(months * 730);
 	}
 
-	void daysToSeconds(Object days) {
-		//	convert days to seconds using appropriate data types for the inputs and the outputs, 2 years => 17520 hours
+	static void daysToSeconds(Integer days) {
+		System.out.println("daysToSeconds() Method: ");
+		System.out.println(days * 86400);
 	}
 
 	void centuriesToSeconds(Object centuries) {
