@@ -20,6 +20,7 @@ class DataTypes {
 		monthsToHours(8);
 		daysToSeconds(730);
 		canDrive(4);
+		centuriesToSeconds(1L);
 	}
 
 	static void yearsToMonths(Integer years) {
@@ -38,8 +39,13 @@ class DataTypes {
 		System.out.println(days * 86400);
 	}
 
-	void centuriesToSeconds(Object centuries) {
+	static void centuriesToSeconds(Long centuries) {
 		//	convert centuries to seconds using appropriate data types for the inputs and the outputs, 1 century => 3.1556952 x 10^9 Seconds
+		System.out.println("centuriesToSeconds() Method: ");
+		Double seconds = 3.1556952;
+		Long secMultiplier = 1000000000L;
+		Double multiplySeconds = seconds * secMultiplier;
+		System.out.println(centuries * multiplySeconds);
 	}
 
 	void dollarsToBitcoin(Object dollars) {
