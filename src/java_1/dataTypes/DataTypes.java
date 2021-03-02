@@ -19,6 +19,7 @@ class DataTypes {
 		yearsToMonths(2);
 		monthsToHours(8);
 		daysToSeconds(730);
+		canDrive(4);
 	}
 
 	static void yearsToMonths(Integer years) {
@@ -45,8 +46,15 @@ class DataTypes {
 		//	convert (usd) dollars $ to bitcoin using appropriate data types for the inputs and the outputs, $35,000 dollars  3.1556952 x 10^9 Seconds
 	}
 
-	void canDrive(Object age) {
+	static void canDrive(Integer age) {
 		//determine if the age passed in is ready to drive, return a value indicating whether or not the age passed in is ready to drive.
+		System.out.println("canDrive() Method: ");
+		if(age >= 16){
+			System.out.println("Able to drive, after passing a drivers test...");
+		}
+		else{
+			System.out.println("Not old enough to take the drivers test...");
+		}
 	}
 
 	String[] getDataTypes(int num1, boolean bool1, long long1) {
