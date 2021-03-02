@@ -21,6 +21,7 @@ class DataTypes {
 		daysToSeconds(730);
 		canDrive(4);
 		centuriesToSeconds(1L);
+		dollarsToBitcoin(35000);
 	}
 
 	static void yearsToMonths(Integer years) {
@@ -48,8 +49,11 @@ class DataTypes {
 		System.out.println(centuries * multiplySeconds);
 	}
 
-	void dollarsToBitcoin(Object dollars) {
+	static void dollarsToBitcoin(Integer dollars) {
 		//	convert (usd) dollars $ to bitcoin using appropriate data types for the inputs and the outputs, $35,000 dollars  3.1556952 x 10^9 Seconds
+		System.out.println("dollarsToBitcoin() Method: ");
+		Double bitcoin = 47328.80;
+		System.out.println(dollars / bitcoin);
 	}
 
 	static void canDrive(Integer age) {
