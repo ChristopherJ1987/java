@@ -4,12 +4,12 @@ class DataTypes {
 
 //		int number = 2021;
 //		int yearOfBirth = 1977;
-//		Array nums = [3,4,5,6,7,8,10,12];
+//		Array[] nums = [3,4,5,6,7,8,10,12];
 //		String movieName = "Meet The Parents";
 //		char male = 'm';
 //		long triplet = 3L;
 //		char female = 'f';
-//		byte decimalVal = .0000000000001f;
+//		float decimalVal = .0000000000001f;
 //		int halfByte = 0101;
 
 
@@ -22,6 +22,8 @@ class DataTypes {
 		canDrive(4);
 		centuriesToSeconds(1L);
 		dollarsToBitcoin(35000);
+		getDataTypes(4, true, 444444444L);
+		getDataTypes(0.4, false, 'm', 888888888888L, 4354, .0000000045, 0x1234, .0000000000001f);
 	}
 
 	static void yearsToMonths(Integer years) {
@@ -67,9 +69,13 @@ class DataTypes {
 		}
 	}
 
-	String[] getDataTypes(int num1, boolean bool1, long long1) {
+	static void getDataTypes(Object... args) {
 //		Use Java to get the data type of the three input variables; and return a string representation of the data types of the three variables as an array.  Do NOT hard code the answers here.  Make sure to use Java to programmatically get the data types.
-		return new String[]{null,null,null};
+
+		System.out.println("getDataTypes() Method: ");
+		for(Object arg : args) {
+			System.out.println("Data Type for " + arg + " is: " + arg.getClass().getName());
+		}
 	}
 
 }
