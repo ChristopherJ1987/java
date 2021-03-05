@@ -7,17 +7,40 @@ public class CollectionsChallenges {
 	public static void main(String[] args) {
 //		Complete the code challenges for the following static methods
 
+		System.out.println("findVal() Method: ");
+		ArrayList<Integer> arrList = new ArrayList<>();
+		arrList.add(4);
+		arrList.add(5);
+		arrList.add(6);
+		arrList.add(7);
+		findVal(4, arrList);
+
+		System.out.println("convertArrToList() Method: ");
+		Object[] arr = new Object[0];
+		convertArrToList(arr);
+
 	}
 
 
-	static int findVal(int val, ArrayList<Integer> arrList) {
+	static Integer findVal(int val, ArrayList<Integer> arrList) {
 //		find a value in the input array list.  return it if found.  If not, return 0.
+		for(Integer i : arrList){
+			if(val == i){
+				System.out.println(i);
+			}
+			else{
+				continue;
+			}
+		}
 		return 0;
 	}
 
 	static List convertArrToList(Object[] array) {
 //		convert the array to a list and return it.
-		return null;
+		Object[] arr = new Object[]{"Christopher", "Mindy", "Barbara", "Whitney", "Jennifer"};
+		List<Object> list = Arrays.asList(arr);
+//		System.out.println(list);
+		return list;
 	}
 
 	static Set<String> listToSet(List<String> states) {
@@ -26,7 +49,7 @@ public class CollectionsChallenges {
 	}
 
 	static int addToList(int x, ArrayList<Integer> numList) {
-		// add the x input to the array list.  return the value if succcessfully added.
+		// add the x input to the array list.  return the value if successfully added.
 		return x;
 	}
 
