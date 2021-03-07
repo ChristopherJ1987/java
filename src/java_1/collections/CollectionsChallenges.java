@@ -39,6 +39,16 @@ public class CollectionsChallenges {
 		list.add(7);
 		removeFromList(7, list);
 
+		System.out.println("insertIntoList() Method: ");
+		ArrayList<Integer> insertList = new ArrayList<>();
+		insertList.add(4);
+		insertList.add(5);
+		insertList.add(6);
+		insertList.add(7);
+		insertList.add(8);
+		insertIntoList(9, 10, insertList);
+
+
 	}
 
 
@@ -86,6 +96,14 @@ public class CollectionsChallenges {
 
 	static int insertIntoList(int x, int i, ArrayList<Integer> numList) {
 		// insert the the value x at index position i for the input numList.  If the index position is outside the bounds of the current numList, add it to the end of the array list.
+		System.out.println(numList);
+		if(i <= numList.size()){
+			numList.add(i, x);
+		}
+		else{
+			numList.add(numList.size(), x);
+		}
+		System.out.println(numList);
 		return x;
 	}
 
