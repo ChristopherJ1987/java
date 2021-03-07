@@ -19,6 +19,11 @@ public class CollectionsChallenges {
 		Object[] arr = new Object[0];
 		convertArrToList(arr);
 
+		System.out.println("listToSet() Method: ");
+		List<String> statesList = Arrays.asList("Arizona", "California", "Colorado", "Delaware", "Georgia", "New Mexico", "Texas");
+		listToSet(statesList);
+
+
 	}
 
 
@@ -39,12 +44,14 @@ public class CollectionsChallenges {
 //		convert the array to a list and return it.
 		Object[] arr = new Object[]{"Christopher", "Mindy", "Barbara", "Whitney", "Jennifer"};
 		List<Object> list = Arrays.asList(arr);
-//		System.out.println(list);
+		System.out.println("The following list has been returned: " + list);
 		return list;
 	}
 
 	static Set<String> listToSet(List<String> states) {
 //		convert a list of US states to a set.  return the set.
+		Set<String> set1 = new HashSet<>(states);
+		System.out.println(set1);
 		return null;
 	}
 
