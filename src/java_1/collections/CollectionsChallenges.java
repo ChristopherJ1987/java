@@ -23,6 +23,21 @@ public class CollectionsChallenges {
 		List<String> statesList = Arrays.asList("Arizona", "California", "Colorado", "Delaware", "Georgia", "New Mexico", "Texas");
 		listToSet(statesList);
 
+		System.out.println("addToList() Method: ");
+		ArrayList<Integer> listy = new ArrayList<>();
+		listy.add(3);
+		listy.add(4);
+		listy.add(5);
+		listy.add(6);
+		addToList(44, listy);
+
+		System.out.println("removeFromList() Method: ");
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(4);
+		list.add(5);
+		list.add(6);
+		list.add(7);
+		removeFromList(7, list);
 
 	}
 
@@ -57,11 +72,16 @@ public class CollectionsChallenges {
 
 	static int addToList(int x, ArrayList<Integer> numList) {
 		// add the x input to the array list.  return the value if successfully added.
+		numList.add(x);
+		System.out.println("The following value has been added to the list, and returned: " + x);
 		return x;
 	}
 
 	static void removeFromList(int x, ArrayList<Integer> numList) {
 		// remove the input parameter value x from the numList.
+		System.out.println(numList);
+		numList.removeIf(num -> num.equals(x));
+		System.out.println(numList);
 	}
 
 	static int insertIntoList(int x, int i, ArrayList<Integer> numList) {
