@@ -48,6 +48,15 @@ public class CollectionsChallenges {
 		insertList.add(8);
 		insertIntoList(9, 10, insertList);
 
+		System.out.println("reverseNums() Method: ");
+		ArrayList<Integer> numberList = new ArrayList<>();
+		numberList.add(4);
+		numberList.add(5);
+		numberList.add(6);
+		numberList.add(7);
+		numberList.add(8);
+		reverseNums(numberList);
+
 
 	}
 
@@ -112,7 +121,10 @@ public class CollectionsChallenges {
 		reverse the values of the nums list
 		return the reversed array list.
 		*/
-		return null;
+		System.out.println(nums);
+		Collections.reverse(nums);
+		System.out.println("The following list is returned and reversed: " + nums);
+		return nums;
 	}
 
 	static LinkedList<String> reverseLinkedList(LinkedList<String> linkedList, boolean mutate) {
