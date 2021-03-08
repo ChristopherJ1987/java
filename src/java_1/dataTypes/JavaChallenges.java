@@ -1,5 +1,9 @@
 package java_1.dataTypes;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class JavaChallenges {
 
 	public static void main(String[] args) {
@@ -21,6 +25,10 @@ public class JavaChallenges {
 
 		System.out.println("reverseString() Method: ");
 		reverseString("Christopher");
+
+		System.out.println("shuffleMessage() Method: ");
+		String[] msg = new String[] {"hey", "there", "friend"};
+		shuffleMessage(msg);
 
 	}
 
@@ -92,7 +100,10 @@ public class JavaChallenges {
 		["hi", "dear", "friend"] => shuffleMessage() => "dear hi friend";
 		["hi", "dear", "friend"] => shuffleMessage() => "friend dear hi";
 */
-		return null;
+		List<String> strList = Arrays.asList(messages);
+		Collections.shuffle(strList);
+		System.out.println(strList);
+		return strList;
 	}
 
 	static double calcGPA(int[] scores) {
