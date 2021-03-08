@@ -10,6 +10,9 @@ public class JavaChallenges {
 		System.out.println("nthFibonacci() Method: ");
 		nthFibonacci(7);
 
+		System.out.println("calcPay() Method: ");
+		calcPay(1, 250.00, 2);
+
 	}
 
 	static void printMsg(String msg, int repeats) {
@@ -45,7 +48,8 @@ public class JavaChallenges {
 		80 hours / period , $50.00 / hr, 8 periods => calcPay(80,25.00,8) => 16000.00
 		1 hr / period, $250.00 / hr, 2 periods => calcPay(1,250.00,2) => 500.00
  */
-		return 0.0d;
+		System.out.println("Total pay is as follows, and returned $" + hrsPerPeriod * hourlyRate * payPeriods + "0");
+		return hrsPerPeriod * hourlyRate * payPeriods;
 	}
 
 	static long solveQuadratic(int x, int y, int z) {
