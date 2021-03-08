@@ -57,6 +57,13 @@ public class CollectionsChallenges {
 		numberList.add(8);
 		reverseNums(numberList);
 
+		System.out.println("reverseLinkedList() Method: ");
+		LinkedList<String> linkedList = new LinkedList<>();
+		linkedList.add("Christopher");
+		linkedList.add("Dionne");
+		linkedList.add("Etta");
+		linkedList.add("Fiona");
+		reverseLinkedList(linkedList, true);
 
 	}
 
@@ -132,6 +139,18 @@ public class CollectionsChallenges {
 /*		reverse the linked list.  If the mutate boolean is set to true, reverse a copy of the linked list without mutating the original list.  If mutate is false, reverse the original linkedList in place.
 		example : ["red","orange","yellow","green","blue","indigo","violet"] => reverseLinkedList => [violet, indigo, blue, green, yellow, orange, red]
  */
+		System.out.println(linkedList);
+		if(!mutate) {
+			LinkedList<String> reversedList = new LinkedList<>();
+			for (int i = linkedList.size() - 1; i >= 0; i--) {
+				reversedList.add(linkedList.get(i));
+			}
+			System.out.println(reversedList);
+		}
+		else{
+			Collections.reverse(linkedList);
+			System.out.println(linkedList);
+		}
 		return linkedList;
 	}
 
