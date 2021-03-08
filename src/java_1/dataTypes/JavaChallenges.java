@@ -8,6 +8,8 @@ public class JavaChallenges {
 		printMsg("hello world \n", 3);
 
 		System.out.println("nthFibonacci() Method: ");
+		nthFibonacci(7);
+
 	}
 
 	static void printMsg(String msg, int repeats) {
@@ -24,7 +26,17 @@ public class JavaChallenges {
 		/*calculate the nth fibonacci number and return the value.  The first 4 fibonacci numbers are : 1, 1, 2, 3...  learn more : http://bit.ly/fibonacci-agile
 		example : nthFibonacci(7) => 13
 		 */
-		return 1;
+		int f[] = new int[n + 1];
+		int i = 0;
+		f[0] = 0;
+		if(n > 0){
+			f[1] = 1;
+			for(i = 2; i <= n; i++){
+				f[i] = f[i - 1] + f[i - 2];
+			}
+		}
+		System.out.println(f[n]);
+		return f[n];
 	}
 
 	static double calcPay(int hrsPerPeriod, double hourlyRate, int payPeriods) {
