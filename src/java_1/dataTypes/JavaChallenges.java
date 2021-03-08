@@ -83,7 +83,7 @@ public class JavaChallenges {
 			reversed = reversed + str.charAt(i);
 		}
 		System.out.println(reversed);
-		return str;
+		return reversed;
 	}
 
 	static String shuffleMessage(String[] messages) {
