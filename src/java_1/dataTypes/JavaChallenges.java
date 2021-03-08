@@ -30,6 +30,9 @@ public class JavaChallenges {
 		String[] msg = new String[] {"hey", "there", "friend"};
 		shuffleMessage(msg);
 
+		System.out.println("calcGPA() Method: ");
+		int[] scoresArr = new int[]{4, 44, 44};
+		calcGPA(scoresArr);
 	}
 
 	static void printMsg(String msg, int repeats) {
@@ -103,7 +106,9 @@ public class JavaChallenges {
 		List<String> strList = Arrays.asList(messages);
 		Collections.shuffle(strList);
 		System.out.println(strList);
-		return strList;
+		String shuffled = strList.get(0) + " " + strList.get(1) + " " + strList.get(2);
+		System.out.println(shuffled);
+		return shuffled;
 	}
 
 	static double calcGPA(int[] scores) {
@@ -116,7 +121,34 @@ public class JavaChallenges {
 			80 - 89 - 3.0
 			90 - 100 - 4.0
 		 */
-		return 4.0;
+		int total = 0;
+		for(int i : scores){
+			total += i;
+		}
+		if(total >=0 && total <= 59){
+			System.out.println("GPA is 0.0");
+			return 0.0;
+		}
+		else if(total >= 60 && total <= 69){
+			System.out.println("GPA is 1.0");
+			return 1.0;
+		}
+		else if(total >= 70 && total <= 79){
+			System.out.println("GPA is 2.0");
+			return 2.0;
+		}
+		else if(total >= 80 && total <= 89){
+			System.out.println("GPA is 3.0");
+			return 3.0;
+		}
+		else if(total >= 90 && total <= 100){
+			System.out.println("GPA is 4.0");
+			return 4.0;
+		}
+		else{
+			System.out.println("Check grades again, because they are out of range.");
+		}
+		return 0.0;
 	}
 
 	static void printEgg() {
