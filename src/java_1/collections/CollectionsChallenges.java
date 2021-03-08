@@ -65,6 +65,15 @@ public class CollectionsChallenges {
 		linkedList.add("Fiona");
 		reverseLinkedList(linkedList, true);
 
+		System.out.println("removeDuplicates() Method: ");
+		ArrayList<String> namesList = new ArrayList<>();
+		namesList.add("Christopher");
+		namesList.add("Christopher");
+		namesList.add("Dionne");
+		namesList.add("Etta");
+		namesList.add("Jennifer");
+		removeDuplicates(namesList);
+
 	}
 
 
@@ -156,7 +165,15 @@ public class CollectionsChallenges {
 
 	static ArrayList<String> removeDuplicates(ArrayList<String> names) {
 //		remove duplicates from the list of name strings.  return a new array list with the unique elements.
-		return names;
+		System.out.println(names);
+		ArrayList<String> newNamesList = new ArrayList<>();
+		for(String name : names){
+			if(!newNamesList.contains(name)){
+				newNamesList.add(name);
+			}
+		}
+		System.out.println("Returned the following new array list with unique elements: " + newNamesList);
+		return newNamesList;
 	}
 
 	static class Person {
