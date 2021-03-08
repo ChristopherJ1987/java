@@ -16,6 +16,9 @@ public class JavaChallenges {
 		System.out.println("solveQuadratic() Method: ");
 		solveQuadratic(4, 2, 3);
 
+		System.out.println("countQuarters() Method: ");
+		countQuarters(10.50);
+
 	}
 
 	static void printMsg(String msg, int repeats) {
@@ -64,7 +67,10 @@ public class JavaChallenges {
 	static int countQuarters(double amount) {
 //		calculate the number of quarters that can be changed for the given amount.
 //		$10.50 => countQuarters(10.50) => 42
-		return 0;
+		double numOfQuarters;
+		numOfQuarters = amount / .25;
+		System.out.println(numOfQuarters);
+		return (int) numOfQuarters;
 	}
 
 	static String reverseString(String str) {
