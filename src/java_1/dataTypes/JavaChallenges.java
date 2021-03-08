@@ -19,6 +19,9 @@ public class JavaChallenges {
 		System.out.println("countQuarters() Method: ");
 		countQuarters(10.50);
 
+		System.out.println("reverseString() Method: ");
+		reverseString("Christopher");
+
 	}
 
 	static void printMsg(String msg, int repeats) {
@@ -75,6 +78,11 @@ public class JavaChallenges {
 
 	static String reverseString(String str) {
 		//reverse the input string and return it.
+		String reversed = "";
+		for(int i = str.length() -1; i >= 0; i--){
+			reversed = reversed + str.charAt(i);
+		}
+		System.out.println(reversed);
 		return str;
 	}
 
