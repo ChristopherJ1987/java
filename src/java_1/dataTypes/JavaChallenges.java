@@ -33,6 +33,10 @@ public class JavaChallenges {
 		System.out.println("calcGPA() Method: ");
 		int[] scoresArr = new int[]{4, 44, 44};
 		calcGPA(scoresArr);
+
+		System.out.println("printEgg() Method: ");
+		printEgg();
+
 	}
 
 	static void printMsg(String msg, int repeats) {
@@ -161,6 +165,7 @@ public class JavaChallenges {
 			 \_______/
 
 		*/
+		System.out.println("\t _______\n\t/\t\t\\\n   /\t\t \\\n   -\"-\'-\"-\'-\"-\n   \\\t     /\n\t\\_______/");
 	}
 
 	static class Item {
