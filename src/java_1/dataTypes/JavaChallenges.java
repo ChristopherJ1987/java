@@ -4,6 +4,10 @@ public class JavaChallenges {
 
 	public static void main(String[] args) {
 		//solve the code challenges found in the static methods on this class
+		System.out.println("printMsg() Method: ");
+		printMsg("hello world \n", 3);
+
+		System.out.println("nthFibonacci() Method: ");
 	}
 
 	static void printMsg(String msg, int repeats) {
@@ -13,6 +17,7 @@ public class JavaChallenges {
 		hello world
 		hello world
 		 */
+		System.out.println(msg.repeat(repeats));
 	}
 
 	static int nthFibonacci(int n) {
