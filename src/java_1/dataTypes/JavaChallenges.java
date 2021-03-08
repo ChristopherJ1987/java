@@ -13,6 +13,9 @@ public class JavaChallenges {
 		System.out.println("calcPay() Method: ");
 		calcPay(1, 250.00, 2);
 
+		System.out.println("solveQuadratic() Method: ");
+		solveQuadratic(4, 2, 3);
+
 	}
 
 	static void printMsg(String msg, int repeats) {
@@ -54,7 +57,8 @@ public class JavaChallenges {
 
 	static long solveQuadratic(int x, int y, int z) {
 		/* compute a quadratic equation using the input parameters.  Recall that a quadratic equation has the format :  x^2 + y + z */
-		return x;
+		System.out.println((x*x) + y + z);
+		return (x*x) + y + z;
 	}
 
 	static int countQuarters(double amount) {
